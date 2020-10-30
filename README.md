@@ -17,12 +17,18 @@ Some of the interesting things we noticed were:
 *_"Trump" was mentioned almost twice as often as "Biden", though "Joe" was mentioned nearly twice as often as "Donald"_*
 ![Name mentions](/images/name_mentions.png)
 
-*_Mean tweet length across Twitter is 34 characters.<sup>[1](https://slate.com/technology/2018/10/twitter-tweet-character-limits-280-140-effect.html)</sup> Mean tweet length for our dataset was 61 characters_*
+*_Mean tweet length across Twitter is 33 characters.<sup>[1](https://slate.com/technology/2018/10/twitter-tweet-character-limits-280-140-effect.html)</sup> Mean tweet length for our dataset was 61 characters_*
 ![Tweet length distribution](/images/tweet_len_dist.png)
 
 *_Retweets comprised 69% of our selected dataset_*
 ![Retweets vs original content](/images/retweets.png)
 
+*_Subjectivity & Polarity_*
+When we examined the overall sentiment of the tweets, we noticed that they tended to skew on the more positive side, with a majority being more objective (we dropped all paired 0.0 values, as we couldn't rule them out as being anomolies).
+
+![Retweets vs original content](/images/subj_dist.png)
+
+![Retweets vs original content](/images/polarity_dist.png)
 
 ## Baseline Models and Final Model Results
 
