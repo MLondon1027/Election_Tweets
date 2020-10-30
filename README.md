@@ -25,6 +25,7 @@ Tweet Data Source: [GitHub Repo link provided @12PM Friday 10/29/2020]
 Red/Blue State Labels: https://en.wikipedia.org/wiki/Red_states_and_blue_states#Table_of_presidential_elections_by_states_since_1972
 
 ## Exploratory Data Analysis
+<img src="images/tweet_len_dist.png" height="420">
 
 ## Baseline Models
 
