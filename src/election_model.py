@@ -15,11 +15,42 @@ from scipy.stats import pearsonr
 
 
 def load_data(csv_file):
+  """
+  Loads the cleaned tweets csv file
+  
+  Parameters
+  ----------
+  csv_file: str
+    The file path of the .csv file to be loaded
+    
+  Outputs
+  -------
+  data: Pandas DataFrame
+    The cleaned dataframe, ready to work on  
+  """
+  
   data = pd.read_csv(csv_file)
   return data
 
 
 def baseline_polarity_model(data):
+  """
+  Runs the baseline Gradient Boosting Regressor model
+  with Polarity as the target
+  
+  Parameters
+  ----------
+  data: Pandas DataFrame
+    The DataFrame to use
+    
+  Outputs
+  -------
+  Returns nothing
+  
+  Saves a plot of the Feature Importance and
+  Permutation Importance
+  """
+  
   X = data[['USA', 'tweet_length', 'hour', 'friends_count', 'followers_count']]
   y = data['polarity']
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42) # Split data
@@ -48,6 +79,23 @@ def baseline_polarity_model(data):
   plt.show()
 
 def final_polarity_model(data):
+  """
+  Runs the enhanced Gradient Boosting Regressor model
+  with Polarity as the target
+  
+  Parameters
+  ----------
+  data: Pandas DataFrame
+    The DataFrame to use
+    
+  Outputs
+  -------
+  Returns nothing
+  
+  Saves a plot of the Feature Importance and
+  Permutation Importance
+  """
+    
   X = data[['USA', 'tweet_length', 'hour', 'friends_count', 'followers_count', 'Biden', 'Trump', 'red', 'blue']]
   y = data['polarity']
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42) # Split data
@@ -76,6 +124,23 @@ def final_polarity_model(data):
   plt.show()
 
 def baseline_subjectivity_model(data):
+  """
+  Runs the baseline Gradient Boosting Regressor model
+  with Subjectivity as the target
+  
+  Parameters
+  ----------
+  data: Pandas DataFrame
+    The DataFrame to use
+    
+  Outputs
+  -------
+  Returns nothing
+  
+  Saves a plot of the Feature Importance and
+  Permutation Importance
+  """
+  
   X = data[['USA', 'tweet_length', 'hour', 'friends_count', 'followers_count']]
   y = data['subjectivity']
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42) # Split data
@@ -104,6 +169,23 @@ def baseline_subjectivity_model(data):
   plt.show()
 
 def final_subjectivity_model(data):
+  """
+  Runs the enhanced Gradient Boosting Regressor model
+  with Subjectivity as the target
+  
+  Parameters
+  ----------
+  data: Pandas DataFrame
+    The DataFrame to use
+    
+  Outputs
+  -------
+  Returns nothing
+  
+  Saves a plot of the Feature Importance and
+  Permutation Importance
+  """
+  
   X = data[['USA', 'tweet_length', 'hour', 'friends_count', 'followers_count', 'Biden', 'Trump', 'red', 'blue']]
   y = data['subjectivity']
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42) # Split data
@@ -132,6 +214,23 @@ def final_subjectivity_model(data):
   plt.show()
 
 def final_overall_sentiment_model(data):
+  """
+  Runs the final Gradient Boosting Regressor model
+  with overall sentiment as the target
+  
+  Parameters
+  ----------
+  data: Pandas DataFrame
+    The DataFrame to use
+    
+  Outputs
+  -------
+  Returns nothing
+  
+  Saves a plot of the Feature Importance and
+  Permutation Importance
+  """
+
   X = data[['USA', 'tweet_length', 'hour', 'friends_count', 'followers_count', 'Biden', 'Trump', 'red', 'blue']]
   y = data['overall_sentiment']
   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=42) # Split data
