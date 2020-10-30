@@ -9,7 +9,7 @@ Feature engineering included extracting location from the tweet if possible (inc
 Because these tweets were made after the first Presidential debate, it will be especially interesting to determine how sentiment changes as the hours pass. Do people become more or less subjective or polarizing?
 
 ## Obtaining Data
-Data Source: [GitHub Repo link provided @12PM Friday 10/29/2020]
+Tweet Data Source: [GitHub Repo link provided @12PM Friday 10/29/2020]
 1. Clone [GitHub Repo link provided @12PM Friday 10/29/2020]
 2. Follow the instructions in the repository to install twarc and tqdm.
 3. Apply for a twitter developer account.
@@ -21,6 +21,8 @@ Data Source: [GitHub Repo link provided @12PM Friday 10/29/2020]
 9. In the terminal, use awk 'NR % 100 == 0' <file.txt> > <result.txt> to systematically sample every 100th tweet id. These are the tweets you will hydrate.
 10. Modify the hydrate.py script in the cloned repository and run the script to rehydrate tweets from your file of tweet ids.
 11. Analyze tweets.
+
+Red/Blue State Labels: https://en.wikipedia.org/wiki/Red_states_and_blue_states#Table_of_presidential_elections_by_states_since_1972
 
 ## Exploratory Data Analysis
 
