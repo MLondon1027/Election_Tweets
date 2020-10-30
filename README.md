@@ -10,6 +10,20 @@ Because these tweets were made after the first Presidential debate, it will be e
 
 ## Exploratory Data Analysis
 
+We first examined general attributes of the data, such as the distribution of tweet lengths, how many retweets there were in the dataset, and the distribution of states the tweets came from (when available).
+
+Some of the interesting things we noticed were:
+
+*_"Trump" was mentioned almost twice as often as "Biden", though "Joe" was mentioned nearly twice as often as "Donald"_*
+![Name mentions](/images/name_mentions.png)
+
+*_Mean tweet length across Twitter is 34 characters.<sup>[1](https://slate.com/technology/2018/10/twitter-tweet-character-limits-280-140-effect.html)</sup> Mean tweet length for our dataset was 61 characters_*
+![Tweet length distribution](/images/tweet_len_dist.png)
+
+*_Retweets comprised 69% of our selected dataset_*
+![Retweets vs original content](/images/retweets.png)
+
+
 ## Baseline Models and Final Model Results
 
 
