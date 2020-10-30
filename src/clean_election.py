@@ -8,10 +8,40 @@ from datetime import tzinfo, timedelta, datetime
 pd.options.mode.chained_assignment = None
 
 def load_data(file):
+  """
+  Loads the cleaned tweets csv file
+  
+  Parameters
+  ----------
+  file: str
+    The file path of the .csv file to be loaded
+    
+  Outputs
+  -------
+  df: Pandas DataFrame
+    The cleaned dataframe, ready to work on  
+  """
+  
   df = pd.read_csv(csv_file)
   return df
 
 def clean(df):
+  """
+  Cleans the original DataFrame, loaded from the json file
+  
+  Parameters
+  ----------
+  df: Pandas DataFrame
+    The original DataFrame to clean up and save
+    
+  Outputs
+  -------
+  Returns nothing
+  
+  df_for_model: Pandas DataFrame
+    The cleaned dataframe, saved to disk in .csv format
+  """
+    
   df['screen_names'] = [ user['screen_name'] for user in df['user']] # Extract screen names
   df['location'] = [user['location'] for user in df['user']] # Extract locations
   df['name'] = [user['name'] for user in df['user']] # Extract name
