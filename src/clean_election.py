@@ -7,12 +7,8 @@ from datetime import tzinfo, timedelta, datetime
 
 pd.options.mode.chained_assignment = None
 
-#warnings.filterwarnings('ignore')
 def load_data(file):
-  tweets = []
-  for line in open(file, 'r'):
-    tweets.append(json.loads(line))
-  df = pd.DataFrame(tweets)
+  df = pd.read_csv(csv_file)
   return df
 
 def clean(df):
@@ -160,5 +156,5 @@ def clean(df):
   df_for_model.to_csv('final_election.csv') # Save to csv
 
 if __name__ == "__main__":
-    df = load_data('data/concatenated_abridged.jsonl')
+    df = load_data('data/subset_data.csv')
     clean(df)
