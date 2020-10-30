@@ -32,10 +32,14 @@ When we examined the overall sentiment of the tweets, we noticed that they tende
 
 <img src="images/subj_dist.png" height="420">
 
-
 <img src="images/polarity_dist.png" height="420">
 **Higher polarity value is a more positive sentiment**
 
+### Subjectivity & Polarity Over Time
+
+<img src="images/subjectivity.png" height="420">
+
+<img src="images/polarity.png" height="420">
 
 ## Baseline Models and Final Model Results
 
