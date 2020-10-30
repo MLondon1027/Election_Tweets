@@ -14,15 +14,15 @@ We first examined general attributes of the data, such as the distribution of tw
 
 Some of the interesting things we noticed were:
 
-*_"Trump" was mentioned almost twice as often as "Biden", though "Joe" was mentioned nearly twice as often as "Donald"_*
+"Trump" was mentioned almost twice as often as "Biden", though "Joe" was mentioned nearly twice as often as "Donald"
 
 <img src="images/name_mentions.png" height="420">
 
-*_Mean tweet length across Twitter is 33 characters.<sup>[1](https://slate.com/technology/2018/10/twitter-tweet-character-limits-280-140-effect.html)</sup> Mean tweet length for our dataset was 61 characters_*
+Mean tweet length across Twitter is 33 characters.<sup>[1](https://slate.com/technology/2018/10/twitter-tweet-character-limits-280-140-effect.html)</sup> Mean tweet length for our dataset was 61 characters
 
 <img src="images/tweet_len_dist.png" height="420">
 
-*_Retweets comprised 69% of our selected dataset_*
+Retweets comprised 69% of our selected dataset
 
 <img src="images/retweets.png" height="420">
 
@@ -31,9 +31,10 @@ Some of the interesting things we noticed were:
 When we examined the overall sentiment of the tweets, we noticed that they tended to skew on the more positive side, with a majority being more objective (we dropped all paired 0.0 values, as we couldn't rule them out as being anomolies).
 
 <img src="images/subj_dist.png" height="420">
+The values near zero are non-zero (very objective)
 
 <img src="images/polarity_dist.png" height="420">
-**Higher polarity value is a more positive sentiment**
+Higher polarity value is a more positive sentiment. All values in the center are non-zero.
 
 ### Subjectivity & Polarity Over Time
 
