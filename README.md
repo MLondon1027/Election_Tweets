@@ -73,4 +73,6 @@ Mean average error is easy to interpret; it is the mean difference between the m
 
 Feature Importance and Permutation Importance was also something to consider. Permutation feature importance measures the increase in the prediction error of the model after we permuted the feature's values, which breaks the relationship between the feature and the true outcome (Source: https://christophm.github.io/interpretable-ml-book/feature-importance.html). 
 
+<img src="images/Overall_Sentiment_Importance.png" height="420">
 
+We can see that length of tweets by far are the most important feature in terms of predicting the overall sentiment. This holds true for both polarity and subjectivity independently.
