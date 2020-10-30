@@ -26,7 +26,30 @@ Red/Blue State Labels: https://en.wikipedia.org/wiki/Red_states_and_blue_states#
 
 ## Exploratory Data Analysis
 
-## Baseline Models and Final Model Results
+## Baseline Models
 
+Using a Gradient Boosted Regressor with the following parameters:
+params = {'n_estimators': 500,
+          'max_depth': 4,
+          'min_samples_split': 5,
+          'learning_rate': 0.01,
+          'loss': 'ls'}
+and the following features: USA(1=yes, 0=no or unsure), Tweet Length, Hour, Biden Mentions(1=yes, 0=no), Trump Mentions(1=yes, 0=no), and Retweet(1=yes, 0=no),
+the mean squared error for predicting polarity was 0.06 and the mean average error was 0.16.
+
+Using the same model, features, and parameters to predict subjectivity, we found that the mean squared error was .089 and the mean absolute error was 0.248.
+
+## Final Model Results
+
+For the final model, we used a Gradient Boosted Regressor with the same parameters and the following features: USA(1=yes, 0=no or unsure), Tweet Length, Hour, Biden Mentions(1=yes, 0=no), Trump Mentions(1=yes, 0=no), and Retweet(1=yes, 0=no), Red state (1=yes, 0=no), Blue state (1=yes, 0=no), Friends Count, Followers Count
+
+
+Subjectivity mean squared error was 0.0875 (a slight improvement from .089) and mean absolute error was 0.245 (a slight improvement from 0.248).
+
+We also looked at predicting the overall sentiment (subjectivity + polarity). The model had a mean squared error of 0.22 and a mean average error of 0.37.
+
+Mean average error is easy to interpret; it is the mean difference between the model's predictions and the actual result. The mean average error is high at 0.37 compared to the average overall sentiment of 0.46. We hope to improve the model in the future by adding further features, exploring other ways to emasure overall sentiment, and determining if using the tweeter's actual state (as opposed to just a red/blue label) would improve the model.
+
+Feature Importance and Permutation Importance was also something to consider. Permutation feature importance measures the increase in the prediction error of the model after we permuted the feature's values, which breaks the relationship between the feature and the true outcome (Source: https://christophm.github.io/interpretable-ml-book/feature-importance.html). 
 
 
