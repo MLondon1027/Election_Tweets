@@ -25,7 +25,27 @@ Tweet Data Source: [GitHub Repo link provided @12PM Friday 10/29/2020]
 Red/Blue State Labels: https://en.wikipedia.org/wiki/Red_states_and_blue_states#Table_of_presidential_elections_by_states_since_1972
 
 ## Exploratory Data Analysis
+
+<img src="images/name_mentions.png" height="420">
+We can see that Donald Trump is mentioned much more than Joe Biden. Interestingly, those who do mention Joe Biden more often call him "Joe" while those who mention Donald Trump most often call him "Trump".
+
 <img src="images/tweet_len_dist.png" height="420">
+The maximum tweet length is 280 characters, although by viewing this distribution plot, we can see that most tweets are much shorter.
+
+<img src="images/polarity.png" height="420">
+Polarity has an upward trend as the hours go by after the debate. We initially hypothesized that the polarity would be higher immediately after but it seems that this is not the case.
+
+<img src="images/polarity_dist.png" height="420">
+There are many instances where the TextBlob library indicates that the polarity is 0 (neutral) because it cannot determine otherwise. Amongst non zero values, there are more positive tweets than negative tweets.
+
+<img src="images/subjectivity.png" height="420">
+Like polarity, subjectivity has an upward trend as the hours go by after the debate, although it sharply drops around hour 70.
+
+<img src="images/subjectivity_dist.png" height="420">
+Subjectivity also has several 0 values and amongst non zero values, more treats are classified as subjective than objective.
+
+<img src="images/retweets.png" height="420">
+There are more retweets than original content in our dataset.
 
 ## Baseline Models
 
