@@ -38,6 +38,8 @@ Higher polarity value is a more positive sentiment. All values in the center are
 
 ### Subjectivity & Polarity Over Time
 
+Tweets tended to get more subjective as more time elapsed, though interestingly they also got more positive in nature. 
+
 <img src="images/subjectivity.png" height="420">
 
 <img src="images/polarity.png" height="420">
