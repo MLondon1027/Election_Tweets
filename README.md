@@ -41,7 +41,7 @@ There are many instances where the TextBlob library indicates that the polarity 
 <img src="images/subjectivity.png" height="420">
 Like polarity, subjectivity has an upward trend as the hours go by after the debate, although it sharply drops around hour 70.
 
-<img src="images/subjectivity_dist.png" height="420">
+<img src="images/subj_dist.png" height="420">
 Subjectivity also has several 0 values and amongst non zero values, more treats are classified as subjective than objective.
 
 <img src="images/retweets.png" height="420">
